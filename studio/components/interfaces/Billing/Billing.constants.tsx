@@ -1,4 +1,4 @@
-import { IconArchive, IconCode, IconDatabase, IconKey } from 'ui'
+import { Badge, IconArchive, IconCode, IconDatabase, IconKey } from 'ui'
 
 export const CANCELLATION_REASONS = [
   'Pricing',
@@ -30,8 +30,10 @@ export const USAGE_BASED_PRODUCTS = [
         costPerUnit: 0.125,
         tooltip: (
           <span>
-            We continuously monitor the total size of your database. Billing is based on the average
-            database size in GB throughout the billing period.
+            Billing is based on the average daily database size in GB throughout the billing period.{' '}
+            <a href="https://supabase.com/docs/guides/platform/database-usage" target="_blank">
+              Docs
+            </a>
           </span>
         ),
       },
@@ -144,9 +146,8 @@ export const USAGE_BASED_PRODUCTS = [
         costPerUnit: 0.000002,
         tooltip: (
           <span>
-            We continuously monitor the amount of serverless functions in your project. Billing is
-            based on the maximum amount of functions at any point in time throughout your billing
-            period.
+            Billing is based on the maximum amount of functions at any point in time throughout your
+            billing period.
           </span>
         ),
       },
